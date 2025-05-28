@@ -1,9 +1,7 @@
 body {
-  background-color: #121212; /* preto suave */
-  color: #eee; /* texto clarinho para contraste */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #111;
+  background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+  color: white;
 }
 
 .container {
