@@ -1,73 +1,92 @@
 body {
-  background-color: #111;
-  background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
-  color: white;
+  font-family: Arial, sans-serif;
+  background-color: #fdf6f0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  padding: 2rem;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+h1, h2 {
+  color: #5a3e36;
 }
 
 .carousel {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
+  margin: 20px 0;
   overflow: hidden;
 }
 
 .carousel-track-container {
   overflow: hidden;
-  position: relative;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.3s ease-in-out;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
   min-width: 100%;
-  transition: transform 0.5s ease;
+  box-sizing: border-box;
 }
 
 .carousel-slide img {
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
+button#prev,
+button#next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: #ffffffaa;
+  border: none;
+  font-size: 2rem;
+  padding: 0 10px;
   cursor: pointer;
-  z-index: 1;
-  color: #444;
+  z-index: 10;
+  border-radius: 4px;
 }
 
-#prev {
+button#prev:hover,
+button#next:hover {
+  background-color: #ffffff;
+}
+
+button#prev {
   left: 10px;
 }
 
-#next {
+button#next {
   right: 10px;
 }
 
-.video iframe {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-top: 1rem;
+.video {
+  margin-top: 40px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 600px; /* limita ao mesmo tamanho das imagens */
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
